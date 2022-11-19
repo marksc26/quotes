@@ -36,29 +36,51 @@ article{
 
 }
 
-.quoteBox{
 
-  padding: 2rem 4rem;
+.quoteBox{
+  display: grid;
+  grid-template-columns: .25fr 2fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  padding: 2rem 2rem;
   border-radius: 1rem;
   max-width: 90%;
   background-color: #e5e5e5;
 
 }
 
+.quoteBox i{
+  font-size: 30px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.quoteBox p{
+  grid-column: 2 /4;
+  grid-row: 1 / 2;
+}
+
+.quoteBox h4{
+  margin: 0;
+  grid-column: 2/3;
+
+  
+}
+
 
 
 .quoteBox-footer{
   display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  align-items: center;
-
-}
-
-.quoteBox-footer > i{
-  font-size: 2.5rem;
+  justify-content: center;
+  margin: 5px;
   
 }
+
+.quoteBox-Button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .quoteBox-footer button{
   border: none;
@@ -70,8 +92,10 @@ article{
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
+/*Neumorp*/
 .quoteBox-footer button{
    box-shadow: -5px -5px 15px rgba(255, 255, 255,1),
                -10px -10px 16px rgba(255, 255, 255, 0.644),
@@ -96,13 +120,25 @@ article{
 
 
 
+@media (max-width: 466px){
 
+  .quoteBox{
+    display: grid;
+    grid-template-columns: .25fr 1fr 1fr;
+    grid-template-rows: 6fr 1fr;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+
+  }
+
+
+}
 
 
 @media (min-width: 800px){
 
   article{
-    margin: 0 90px;
+    margin: 0 120px;
   }
 }
 
