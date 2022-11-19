@@ -1,13 +1,14 @@
 import QuoteButton from "./QuoteButton"
 
-const QuoteBox = ({quote, getNewValues, colorObject}) => {
+
+const QuoteBox = ({quote, getNewValues, backgroundObject, colorObject}) => {
   return (
-    <article cla>
+    <article className="quoteBox">
         <p style={colorObject}>{quote.quote}</p>
-        <h4 syle={colorObject}>{quote.author}</h4>
+        <h4 style={colorObject}>{quote.author}</h4>
         <section className="quoteBox-footer">
-            <QuoteButton getNewValues={getNewValues}/>
-            <i className="iconos ponlos aqui"></i>
+            <QuoteButton getNewValues={getNewValues} backgroundObject={backgroundObject}/>
+            <i style={colorObject} className='bx bxs-quote-alt-left'></i>
         </section>
         
 

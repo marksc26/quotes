@@ -1,10 +1,12 @@
-import React from 'react'
 
-const QuoteButton = ({getNewValues, backgroudnObject}) => {
+const QuoteButton = ({getNewValues, backgroundObject}) => {
   return (
-    <button onClick={getNewValues} style={backgroudnObject}  >
-        <i className='pones icono'></i>
-    </button>
+    <div className="neumo">
+        <button onClick={getNewValues} style={backgroundObject}>
+        <i  className='bx bx-right-arrow' ></i>
+       </button>
+    </div>
+    
   )
 }
 

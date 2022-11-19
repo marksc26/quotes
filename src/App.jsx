@@ -1,5 +1,4 @@
 import quoteDB from "./db/quotes.json"
-import QuoteButton from "./components/QuoteButton"
 import QuoteBox from "./components/QuoteBox"
 import colors from "./db/colors"
 import { useState } from "react"
@@ -8,23 +7,23 @@ import { useState } from "react"
 function App() {
 
   
-  const getRandom = (array) =>{
+  const getRandom = (array) => {
     const randomIndex = Math.floor(array.length * Math.random())
     return array[randomIndex]
   }
 
   const [quote, setQuote] = useState(getRandom(quoteDB))
   const [color, setColor] = useState(getRandom(colors))
-  
-  const getNewValues = () =>{
+
+  const getNewValues = () => {
     const newQuote = getRandom(quoteDB)
-    const newColor = getRandmo(colors)
+    const newColor = getRandom(colors)
     setQuote(newQuote)
     setColor(newColor)
     
   }
 
-  const backgroundObject ={
+  const backgroundObject = {
     backgroundColor: color
   }
 
@@ -33,13 +32,14 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App" style={backgroundObject}>
       
       <QuoteBox 
       quote={quote} 
       getNewValues={getNewValues}
       backgroundObject={backgroundObject}
-      colorObject= {colorObject}/>
+      colorObject={colorObject}/>
+
     </div>
   )
 }
